@@ -1,4 +1,3 @@
-/// <reference types="node" />
 import { env } from '../config/env.js';
 
 class UpstreamHttpError extends Error {
