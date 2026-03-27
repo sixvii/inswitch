@@ -9,7 +9,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "types": ["node"]
+    "lib": ["ES2022"]
   },
   "include": ["src"],
   "exclude": ["src/test", "node_modules"]
