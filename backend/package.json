@@ -1,0 +1,23 @@
+{
+  "name": "interswitch-backend-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "node-api"
+  ],
+  "scripts": {
+    "predev:node-api": "pid=$(lsof -ti tcp:5001 -sTCP:LISTEN); if [ -n \"$pid\" ]; then kill -9 $pid; fi",
+    "dev:node-api": "npm --workspace node-api run dev",
+    "build:node-api": "npm --workspace node-api run build",
+    "start:node-api": "npm --workspace node-api run start",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down"
+  },
+  "dependencies": {
+    "cloudinary": "^2.9.0",
+    "multer": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/multer": "^2.1.0"
+  }
+}

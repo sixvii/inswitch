@@ -1,0 +1,42 @@
+{
+  "name": "interswitch-node-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "test": "NODE_ENV=test tsx --test src/test/**/*.test.ts",
+    "smoke:live": "tsx src/scripts/smokeLiveCheck.ts",
+    "diag:interswitch": "tsx src/scripts/interswitchDiagnostics.ts",
+    "migrate:backfill-transaction-owners": "tsx src/scripts/backfillTransactionOwners.ts",
+    "migrate:backfill-transaction-owners:apply": "tsx src/scripts/backfillTransactionOwners.ts --apply",
+    "migrate:backfill-user-balance": "tsx src/scripts/backfillUserBalance.ts",
+    "migrate:backfill-user-balance:apply": "tsx src/scripts/backfillUserBalance.ts --apply"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.9.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.6.2",
+    "multer": "^2.1.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/multer": "^2.1.0",
+    "@types/node": "^22.7.4",
+    "@types/supertest": "^6.0.3",
+    "mongodb-memory-server": "^10.1.4",
+    "supertest": "^7.1.1",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}
